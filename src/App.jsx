@@ -1,8 +1,19 @@
+import Header from './components/Header.jsx'
+import StudentList from './components/StudentList.jsx'
+
+const startingStudents = [
+  { id: 1, name: 'Ana Cruz', grade: 92 },
+  { id: 2, name: 'Ben Lim', grade: 85 },
+  { id: 3, name: 'Cy Tan', grade: 71 },
+]
+
+
 function App() {
   return (
     <div className="min-h-screen bg-stone-100 text-stone-800">
       <main className="mx-auto max-w-xl px-6 py-10">
-        <h1 className="text-3xl font-bold text-[#8B1C2C]">Grade Tracker</h1>
+        <Header />
+        <StudentList students={startingStudents} />
       </main>
     </div>
   )
